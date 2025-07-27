@@ -300,6 +300,13 @@ RewriteRule ^games/genre/([^/]+)/([^/]+)/?$ games.php?view=genre&genre_id=$1&gen
 RewriteRule ^games/genre/([^/]+)/([^/]+)/([^/]+)/?$ games.php?view=genre&genre_id=$1&genre_url=$2&page=$3 [L,QSA]
 RewriteRule ^games/([^/]+)/([^/]+)/?$ games.php?view=game&game_id=$1 [L,QSA]
 
+# RSS Feeds
+RewriteRule ^rss/?$ rss.php [L,QSA]
+RewriteRule ^rss/blogs/?$ rss.php?type=blogs [L,QSA]
+RewriteRule ^rss/posts/?$ rss.php?type=posts [L,QSA]
+RewriteRule ^rss/blogs/user/([^/]+)/?$ rss.php?type=blogs&user_id=$1 [L,QSA]
+RewriteRule ^rss/posts/user/([^/]+)/?$ rss.php?type=posts&user_id=$1 [L,QSA]
+
 # Developers
 RewriteRule ^api/([^/]+)/?$ api.php?do=$1 [L,QSA]
 RewriteRule ^developers/?$ developers.php [L,QSA]
