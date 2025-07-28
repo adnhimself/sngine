@@ -217,6 +217,9 @@ RewriteRule ^blogs/?$ blogs.php [L,QSA]
 RewriteRule ^blogs/new/?$ blogs.php?view=new [L,QSA]
 RewriteRule ^blogs/edit/([^/]+)/?$ blogs.php?view=edit&post_id=$1 [L,QSA]
 RewriteRule ^blogs/category/([^/]+)/([^/]+)/?$ blogs.php?view=category&category_id=$1 [L,QSA]
+# Fix: Redirect incorrect RSS URLs with extra /blog/ segment to correct URLs  
+RewriteRule ^blogs/blog/([0-9]+)/(.*)$ /blogs/$1/$2 [R=301,L]
+RewriteRule ^blogs/blog/([0-9]+)/?$ /blogs/$1/ [R=301,L]
 RewriteRule ^blogs/([^/]+)/([^/]+)/?$ blogs.php?view=blog&post_id=$1 [L,QSA]
 
 # Market
