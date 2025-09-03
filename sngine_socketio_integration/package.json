@@ -1,0 +1,25 @@
+{
+  "name": "sngine-socketio-server",
+  "version": "1.0.0",
+  "description": "Socket.io server for Sngine real-time features",
+  "main": "socket_server.js",
+  "scripts": {
+    "start": "node socket_server.js",
+    "dev": "nodemon socket_server.js",
+    "pm2": "pm2 start socket_server.js --name sngine-socket"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.4",
+    "mysql2": "^3.6.5",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": ["sngine", "socket.io", "real-time", "chat"],
+  "author": "Sngine Mobile Team",
+  "license": "MIT"
+}
