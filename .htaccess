@@ -78,6 +78,9 @@ RewriteRule .* - [L,QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
+# Sitemap
+RewriteRule ^sitemap\.xml$ sitemap.php [L,QSA]
+
 # Installer ✅
 RewriteRule ^install/?$ install.php [L,QSA]
 
